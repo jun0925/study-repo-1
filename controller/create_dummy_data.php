@@ -21,4 +21,6 @@ include $_SERVER['DOCUMENT_ROOT']."/model/use_database_management.php";
 
 // dummyData 생성
 include $_SERVER['DOCUMENT_ROOT']."/model/create_dummy_data_employee.php";
+
+echo "<a href=\"/setting.php\">설정으로 돌아가기</a>";
 ?>
