@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>로그인 페이지</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <style>
@@ -99,20 +100,30 @@
         </style>
     </head>
     <body>
-        <form action="index.html" method="post" class="loginForm">
+        <form action="/controller/login.php" method="post" class="loginForm" onsubmit="return login()">
             <h2>Login</h2>
             <div class="idForm">
-                <input type="text" class="id" placeholder="ID">
+                <input type="text" class="id" name="id" placeholder="ID">
             </div>
             <div class="passForm">
-                <input type="password" class="pw" placeholder="PW">
+                <input type="password" class="pw" name="pw" placeholder="PW">
             </div>
-            <button type="button" class="btn" onclick="button()">
+            <button type="submit" class="btn">
                 LOG IN
             </button>
             <script>
-                let button = () => {
-                    alert('login Button !')
+                function login(){
+                    let $id = $("input[name=id]").val();
+                    let $pw = $("input[name=pw]").val();
+
+                    if($id === ''){
+                        alert('아이디를 입력해 주세요.');
+                        return false;
+                    }else if($pw === ''){
+                        alert('패스워드를 입력해 주세요.');
+                        return false;
+                    }
+                    return true;
                 }
             </script>
             <div class="bottomText">
