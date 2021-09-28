@@ -2,9 +2,9 @@
 end($dummyData); 
 $lastKey = key($dummyData);
 
-$sql = "INSERT INTO employee(user_id, user_pw, name, age, phone, adress, grade) VALUE";
+$sql = "INSERT INTO employee(user_id, user_pw, name, age, gender, phone, adress, grade) VALUE";
 foreach($dummyData as $key => $val){
-    $sql .= "('{$val[0]}', '{$val[1]}', '{$val[2]}', {$val[3]}, '{$val[4]}', '{$val[5]}', '{$val[6]}')";
+    $sql .= "('{$val[0]}', '{$val[1]}', '{$val[2]}', {$val[3]}, '{$val[4]}', '{$val[5]}', '{$val[6]}', '{$val[7]}')";
     if($key !== $lastKey) $sql .= ',';
 }
 

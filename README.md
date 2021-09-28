@@ -11,6 +11,7 @@
 * user_pw : 비밀번호
 * name : 이름
 * age : 나이
+* gender : 성별
 * phone : 연락처
 * adress : 주소
 * grade : 직급

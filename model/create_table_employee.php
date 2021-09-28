@@ -5,6 +5,7 @@ $sql = "CREATE TABLE IF NOT EXISTS employee (
     user_pw varchar(50) NOT NULL,
     name varchar(30) NOT NULL,
     age tinyint unsigned NOT NULL,
+    gender varchar(2) NOT NULL,
     phone varchar(13) NOT NULL,
     adress varchar(255) NOT NULL,
     grade varchar(30) NOT NULL,
