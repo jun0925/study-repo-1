@@ -1,3 +1,9 @@
+<?php
+include $_SERVER['DOCUMENT_ROOT']."/inc/common.php";
+if(!is_login()){
+    header("Location: /login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
