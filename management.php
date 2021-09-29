@@ -38,7 +38,7 @@ if(!is_login()){
                     <button type="submit" class="btn btn-default">조회하기</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">로그아웃</a></li>
+                    <li><a href="/controller/logout.php">로그아웃</a></li>
                 </ul>
             </div>
         </div>
